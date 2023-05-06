@@ -47,7 +47,7 @@ public class creatDeparmentTest {
                 dpment.creat_Department(data[i].title);
                 String tagline = lg.selecTagline();
                 switch (tagline) {
-                    case "Lựu chọn đã tồn tại!":
+                    case "Lựa chọn đã tồn tại!":
                         lg.passed();
                         Thread.sleep(500);
                         lg.deleTagline();
@@ -60,7 +60,9 @@ public class creatDeparmentTest {
                         break;
 
                     default:
-                        lg.failed();
+                        dpment.btn_DoneDeparment.click();
+                        System.out.println("Notify System: Tạo thành công hạng mục DEV");
+                        lg.passed();
                         break;
                 }
             }

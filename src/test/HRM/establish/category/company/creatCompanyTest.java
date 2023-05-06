@@ -31,7 +31,6 @@ public class creatCompanyTest {
             nav.navigateHRM();
             Thread.sleep(500);
             cpany.navigationHRM_setup();
-            // cpany.choseListEstablish("Hạng mục");
             cpany.btn_Company.click();
             cpany.btn_EditCompany.click();
             creatCompanyTest[] data = {
@@ -64,7 +63,7 @@ public class creatCompanyTest {
                         cpany.chose_MemberCategory("dang diem");
                         cpany.icon_AddCompany.click();
                         break;
-                    case "Lựu chọn đã tồn tại!":
+                    case "Lựa chọn đã tồn tại!":
                         lg.passed();
                         Thread.sleep(500);
                         lg.deleTagline();

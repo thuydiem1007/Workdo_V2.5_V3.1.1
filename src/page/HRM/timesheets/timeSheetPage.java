@@ -18,6 +18,7 @@ public class timeSheetPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+    // #region
 
     @FindBys(@FindBy(xpath = "//table[@class='table is-vcentered sticky']/tbody/tr"))
     public List<WebElement> rows_table;
@@ -46,6 +47,7 @@ public class timeSheetPage {
     @FindBy(xpath = "//p[contains(text(),'Bạn đã export file bảng công thành công!')]")
     public WebElement title_Success;
 
+    // #endregion
     public void table(String condition) {
         try {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
